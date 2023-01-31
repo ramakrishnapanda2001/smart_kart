@@ -46,7 +46,7 @@ body{
     position: relative;
 }
 .product-box img{
-    width: 250px;
+    width: 230px;
     height: 200px;
 }
 .product-box:hover{

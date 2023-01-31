@@ -6,12 +6,12 @@
 <head>
 <link rel="stylesheet" href="cart.css">
 <title>Insert title here</title>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+	rel='stylesheet'>
 </head>
 <body>
 
-
-
-<h1>Shopping Cart</h1>
+	<h1>Shopping Cart</h1>
 
 <div class="shopping-cart">
 
@@ -31,6 +31,7 @@ class Product{
 	int p_id = 0;
 	int price = 0;
 	int quantity = 0;
+	int totalOrderValue = 0;
 	
 }
 Product p = new Product();
@@ -54,16 +55,16 @@ try{
         pst2.setInt(1,rs1.getInt("product_id"));
         ResultSet rs2 = pst2.executeQuery();
     	while(rs2.next()){
+    		p.totalOrderValue += Integer.parseInt(rs1.getString("total_price"));
     %>
        	<div class="product">
 		    <div class="product-image">
 		      <img src="<%out.print(rs2.getString("product_img")); %>">
 		    </div>
 		    <div class="product-details">
-		      <div class="product-title"><%=rs2.getString("product_title")%></div>
 		      <p class="product-description"><%=rs2.getString("product_title")%></p>
 		    </div>
-		    <div class="product-price"><%=rs1.getInt("product_price")%></div>
+		    <div class="product-price"><i class='bx bx-rupee'></i><%=rs1.getInt("product_price")%></div>
 		    <div class="product-quantity">
 		      <input type="number" value="<%out.print(rs1.getString("quantity")); %>" min="1">
 		    </div>
@@ -72,7 +73,7 @@ try{
 		        Remove
 		      </button>
 		    </div>
-		    <div class="product-line-price"><%=rs1.getInt("total_price")%></div>
+		    <div class="product-line-price"><i class='bx bx-rupee'></i><%=rs1.getInt("total_price")%></div>
 		  </div>
   
     <%}}
@@ -82,48 +83,16 @@ try{
  }
  %>
 
-		
-
-  
-
- <!--  <div class="product">
-    <div class="product-image">
-      <img src="https://s.cdpn.io/3/large-NutroNaturalChoiceAdultLambMealandRiceDryDogFood.png">
-    </div>
-    <div class="product-details">
-      <div class="product-title">Nutro™ Adult Lamb and Rice Dog Food</div>
-      <p class="product-description">Who doesn't like lamb and rice? We've all hit the halal cart at 3am while quasi-blackout after a night of binge drinking in Manhattan. Now it's your dog's turn!</p>
-    </div>
-    <div class="product-price">45.99</div>
-    <div class="product-quantity">
-      <input type="number" value="1" min="1">
-    </div>
-    <div class="product-removal">
-      <button class="remove-product">
-        Remove
-      </button>
-    </div>
-    <div class="product-line-price">45.99</div>
-  </div>
-
   <div class="totals">
     <div class="totals-item">
-      <label>Subtotal</label>
-      <div class="totals-value" id="cart-subtotal">71.97</div>
-    </div>
-    <div class="totals-item">
-      <label>Tax (5%)</label>
-      <div class="totals-value" id="cart-tax">3.60</div>
-    </div>
-    <div class="totals-item">
       <label>Shipping</label>
-      <div class="totals-value" id="cart-shipping">15.00</div>
+      <div class="totals-value" id="cart-shipping"><i class='bx bx-rupee'></i>15.00</div>
     </div>
     <div class="totals-item totals-item-total">
       <label>Grand Total</label>
-      <div class="totals-value" id="cart-total">90.57</div>
+      <div class="totals-value" id="cart-total"><i class='bx bx-rupee'></i><%=p.totalOrderValue+15.00 %></div>
     </div>
-  </div> -->
+  </div> 
       
       <button class="checkout">Checkout</button>
 
