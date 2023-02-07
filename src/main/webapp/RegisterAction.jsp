@@ -16,7 +16,6 @@ try{
 	if(con != null){
 		System.out.println("Connection Sucessful !!");
 	}
-	//MySQLConnectionProvider conProvider = new MySQLConnectionProvider();
 	PreparedStatement ps = con.prepareStatement("insert into users(name,email,phone,password) values(?,?,?,?)");
 	ps.setString(1, name);
 	ps.setString(2, email);

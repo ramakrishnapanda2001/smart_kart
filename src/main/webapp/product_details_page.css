@@ -84,7 +84,7 @@
     object-fit: contain;
 }
 
-.product-image-slider{
+/* .product-image-slider{
     display: flex;
     gap: 10px;
     margin: 10px 0;
@@ -96,7 +96,7 @@
     background: var(--bg-grey);
     padding: 6px;
     cursor: pointer;
-}
+} */
 
 /** product title **/
 

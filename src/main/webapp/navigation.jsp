@@ -19,6 +19,7 @@
                     <button class="search-btn">search</button>
                 </div>
                 <a href="#"><img src="assets/img/user.png" alt="user logo"></a>
+                <a href="#"><img src="assets/img/my-wishlist.png" alt="wishlist img"></a>
                 <a href="cart.jsp"><img src="assets/img/cart.png" alt="cart img"></a>
             </div>
         </div>

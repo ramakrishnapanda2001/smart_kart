@@ -62,7 +62,7 @@ body{
 .price{
     font-weight: 600;
 }
-.add-cart{
+.my-wishlist{
     position: absolute;
     bottom: 0;
     right: 0;
@@ -71,6 +71,6 @@ body{
     padding: 10px;
     cursor: pointer;
 }
-.add-cart:hover{
+.my-wishlist:hover{
 	background: hsl(249,32%,17%);
 }

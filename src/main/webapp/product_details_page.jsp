@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Single E-commerce Product Page using HTML, CSS - Codingscape</title>
+    <title>Products Listing Page</title>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="product_details_page.css">
     <!---Boxicons CDN Setup for icons-->
@@ -65,12 +65,6 @@ catch(Exception e){
                     <div class="product-image">
                         <div class="product-image-main">
                             <img src="<%=p.img_url %>" alt="" id="product-main-image">
-                        </div>
-                        <div class="product-image-slider">
-                            <img src="img/tshirt-1.png" alt=""  class="image-list">
-                            <img src="img/tshirt-2.png" alt=""  class="image-list">
-                            <img src="img/tshirt-3.png" alt=""  class="image-list">
-                            <img src="img/tshirt-group.png" alt=""  class="image-list">
                         </div>
                     </div>
                 </div>

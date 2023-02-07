@@ -58,7 +58,6 @@ try{
 	}else{
 		PreparedStatement add_to_cart = con.prepareStatement("insert into cart(user_id,product_id,product_price,quantity,total_price) values(?,?,?,?,?)");
 		p.quantity = 1;
-		//out.println((String)session.getAttribute("uid"));
 		add_to_cart.setString(1,(String)session.getAttribute("email"));
 		add_to_cart.setInt(2,p.p_id);
 		add_to_cart.setInt(3,p.price);
